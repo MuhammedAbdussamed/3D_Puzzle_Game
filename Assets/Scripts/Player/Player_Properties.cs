@@ -10,7 +10,8 @@ public class Player_Properties : MonoBehaviour
     internal Animator animator;
 
     // Bools
-    [SerializeField] internal bool isWalking;
+    internal bool isWalking;
+    internal bool inInteractArea;
 
     // States
     internal IState idleState;
@@ -28,10 +29,5 @@ public class Player_Properties : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
     }
-
-    void Update()
-    {
-        
-    } 
 
 }

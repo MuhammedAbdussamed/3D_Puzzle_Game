@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,7 +24,7 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
-        AssignInputsMaps();
+        AssignInputMaps();
     }
 
     void Update()
@@ -33,7 +34,7 @@ public class InputManager : MonoBehaviour
 
     #region Functions
 
-    void AssignInputsMaps()
+    void AssignInputMaps()
     {
         
         movementActionMap = inputs.FindActionMap("Movement");           //
@@ -44,7 +45,8 @@ public class InputManager : MonoBehaviour
         interaction = interactionActionMap.FindAction("Interaction");   //  Action atamalari
         cameraTurn = cameraActionMap.FindAction("Turn");                // 
 
-        movementActionMap.Enable();
+        movementActionMap.Enable();  
+        interactionActionMap.Enable();                                                                   
         cameraActionMap.Enable();
     }
 

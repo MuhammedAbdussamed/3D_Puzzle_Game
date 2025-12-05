@@ -33,7 +33,7 @@ public class Player_Camera : MonoBehaviour
 
         yaw += mouseX;                                                                              // Sağa - sol değerini tutan değişken
         pitch -= mouseY;                                                                            // Yukari - aşaği değerini tutan değişken
-        pitch = Mathf.Clamp(pitch,-80f,80f);                                                        // Fazla yukari ya da aşaği bakma
+        pitch = Mathf.Clamp(pitch,-30f,60f);                                                        // Fazla yukari ya da aşaği bakma
 
         transform.rotation = Quaternion.Euler(pitch,yaw,0f);                                        // Kameranin rotasyonunu döndür
         player.rotation = Quaternion.Euler(0f,yaw,0f);                                              // Player'i sağa sola çevir
